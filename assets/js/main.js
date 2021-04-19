@@ -25,12 +25,7 @@ function relogio() {
     document.addEventListener('click', function(e) {
         const el = e.target
         
-        if(el.classList.contains('zerar')) {
-            clearInterval(timer)
-           
-            relogio.classList.remove('pausado')
-            segundos = 0
-        }
+        
     
         if(el.classList.contains('iniciar')) {
            relogio.classList.remove('pausado')
@@ -41,6 +36,12 @@ function relogio() {
         if(el.classList.contains('pausar')) {
            clearInterval(timer)
            relogio.classList.add('pausado') 
+        }
+        if(el.classList.contains('zerar')) {
+            clearInterval(timer)
+            relogio.innerText = '00:00:00'
+            relogio.classList.remove('pausado')
+            segundos = 0
         }
     })  
 }
