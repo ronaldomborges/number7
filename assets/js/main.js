@@ -39,7 +39,7 @@ function relogio() {
         }
         if(el.classList.contains('zerar')) {
             clearInterval(timer)
-            relogio.innerText = '00:00:00'
+            
             relogio.classList.remove('pausado')
             segundos = 0
         }
